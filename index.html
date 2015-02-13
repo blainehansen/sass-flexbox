@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <link href='https://fonts.googleapis.com/css?family=Chivo:900' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <title>Sass-flexbox by zessx</title>
+  </head>
+
+  <body>
+    <div id="container">
+      <div class="inner">
+
+        <header>
+          <h1>Sass-flexbox</h1>
+          <h2>Manage Flexbox in Sass easily.</h2>
+        </header>
+
+        <section id="downloads" class="clearfix">
+          <a href="https://github.com/zessx/sass-flexbox/zipball/master" id="download-zip" class="button"><span>Download .zip</span></a>
+          <a href="https://github.com/zessx/sass-flexbox/tarball/master" id="download-tar-gz" class="button"><span>Download .tar.gz</span></a>
+          <a href="https://github.com/zessx/sass-flexbox" id="view-on-github" class="button"><span>View on GitHub</span></a>
+        </section>
+
+        <hr>
+
+        <section id="main_content">
+          <h1>
+<a id="sassflexbox" class="anchor" href="#sassflexbox" aria-hidden="true"><span class="octicon octicon-link"></span></a>SassFlexbox</h1>
+
+<p><img src="https://raw.githubusercontent.com/zessx/sass-flexbox/master/sass-flexbox.png" alt="SassFlexbox"><br>
+Manage Flexbox in Sass easily.</p>
+
+<h2>
+<a id="configuration" class="anchor" href="#configuration" aria-hidden="true"><span class="octicon octicon-link"></span></a>Configuration</h2>
+
+<p>Put <code>sass-flexbox.scss</code> file in your project, and include it via your Sass manifest:</p>
+
+<pre><code>@import "helpers/sass-flexbox";
+</code></pre>
+
+<h2>
+<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span class="octicon octicon-link"></span></a>Usage</h2>
+
+<p>SassFlexbox comes with a bunch of placeholders and mixins to helps you using Flexbox, without carrying of vendor prefixes. Mixins attempt to use placeholders as soon as possible, to avoid extra compiled code. </p>
+
+<h3>
+<a id="display" class="anchor" href="#display" aria-hidden="true"><span class="octicon octicon-link"></span></a>Display</h3>
+
+<ul>
+<li><code>%display-flex</code></li>
+<li><code>%display-flex-inline</code></li>
+<li><strong><code>display-flex()</code></strong></li>
+<li><strong><code>display-flex-inline()</code></strong></li>
+</ul>
+
+<h3>
+<a id="flex-direction" class="anchor" href="#flex-direction" aria-hidden="true"><span class="octicon octicon-link"></span></a>Flex direction</h3>
+
+<ul>
+<li><code>%flex-direction-row</code></li>
+<li><code>%flex-direction-row-reverse</code></li>
+<li><code>%flex-direction-column</code></li>
+<li><code>%flex-direction-column-reverse</code></li>
+<li><code>%flex-direction-inherit</code></li>
+<li>
+<strong><code>flex-direction($direction)</code></strong> </li>
+</ul>
+
+<h3>
+<a id="flex-wrap" class="anchor" href="#flex-wrap" aria-hidden="true"><span class="octicon octicon-link"></span></a>Flex wrap</h3>
+
+<ul>
+<li><code>%flex-wrap-nowrap</code></li>
+<li><code>%flex-wrap-wrap</code></li>
+<li><code>%flex-wrap-wrap-reverse</code></li>
+<li><code>%flex-wrap-inherit</code></li>
+<li><strong><code>flex-wrap($wrap)</code></strong></li>
+</ul>
+
+<h3>
+<a id="flex-flow" class="anchor" href="#flex-flow" aria-hidden="true"><span class="octicon octicon-link"></span></a>Flex flow</h3>
+
+<ul>
+<li><strong><code>flex-flow($direction, $wrap)</code></strong></li>
+</ul>
+
+<h3>
+<a id="order" class="anchor" href="#order" aria-hidden="true"><span class="octicon octicon-link"></span></a>Order</h3>
+
+<ul>
+<li><strong><code>order($order)</code></strong></li>
+</ul>
+
+<h3>
+<a id="flex-grow" class="anchor" href="#flex-grow" aria-hidden="true"><span class="octicon octicon-link"></span></a>Flex grow</h3>
+
+<ul>
+<li><strong><code>flex-grow($grow)</code></strong></li>
+</ul>
+
+<h3>
+<a id="flex-shrink" class="anchor" href="#flex-shrink" aria-hidden="true"><span class="octicon octicon-link"></span></a>Flex shrink</h3>
+
+<ul>
+<li><strong><code>flex-shrink($shrink)</code></strong></li>
+</ul>
+
+<h3>
+<a id="flex-basis" class="anchor" href="#flex-basis" aria-hidden="true"><span class="octicon octicon-link"></span></a>Flex basis</h3>
+
+<ul>
+<li><strong><code>flex-basis($basis)</code></strong></li>
+</ul>
+
+<h3>
+<a id="flex" class="anchor" href="#flex" aria-hidden="true"><span class="octicon octicon-link"></span></a>Flex</h3>
+
+<ul>
+<li><strong><code>flex($grow, $shrink, $basis)</code></strong></li>
+</ul>
+
+<h3>
+<a id="justify-content" class="anchor" href="#justify-content" aria-hidden="true"><span class="octicon octicon-link"></span></a>Justify content</h3>
+
+<ul>
+<li><code>%justify-content-flex-start</code></li>
+<li><code>%justify-content-flex-end</code></li>
+<li><code>%justify-content-center</code></li>
+<li><code>%justify-content-space-between</code></li>
+<li><code>%justify-content-space-around</code></li>
+<li><code>%justify-content-inherit</code></li>
+<li><strong><code>justify-content($justify)</code></strong></li>
+</ul>
+
+<h3>
+<a id="align-items" class="anchor" href="#align-items" aria-hidden="true"><span class="octicon octicon-link"></span></a>Align items</h3>
+
+<ul>
+<li><code>%align-items-flex-start</code></li>
+<li><code>%align-items-flex-end</code></li>
+<li><code>%align-items-center</code></li>
+<li><code>%align-items-baseline</code></li>
+<li><code>%align-items-stretch</code></li>
+<li><code>%align-items-inherit</code></li>
+<li><strong><code>align-items($align)</code></strong></li>
+</ul>
+
+<h3>
+<a id="align-self" class="anchor" href="#align-self" aria-hidden="true"><span class="octicon octicon-link"></span></a>Align self</h3>
+
+<ul>
+<li><code>%align-self-auto</code></li>
+<li><code>%align-self-flex-start</code></li>
+<li><code>%align-self-flex-end</code></li>
+<li><code>%align-self-center</code></li>
+<li><code>%align-self-baseline</code></li>
+<li><code>%align-self-stretch</code></li>
+<li><code>%align-self-inherit</code></li>
+<li><strong><code>align-self($align)</code></strong></li>
+</ul>
+
+<h3>
+<a id="align-content" class="anchor" href="#align-content" aria-hidden="true"><span class="octicon octicon-link"></span></a>Align content</h3>
+
+<ul>
+<li><code>%align-content-flex-start</code></li>
+<li><code>%align-content-flex-end</code></li>
+<li><code>%align-content-center</code></li>
+<li><code>%align-content-space-between</code></li>
+<li><code>%align-content-space-around</code></li>
+<li><code>%align-content-stretch</code></li>
+<li><code>%align-content-inherit</code></li>
+<li><strong><code>align-content($align)</code></strong></li>
+</ul>
+
+<h2>
+<a id="sources" class="anchor" href="#sources" aria-hidden="true"><span class="octicon octicon-link"></span></a>Sources</h2>
+
+<ul>
+<li><a href="http://www.w3.org/TR/css3-flexbox/">http://www.w3.org/TR/css3-flexbox/</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Flexible_boxes">https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Flexible_boxes</a></li>
+<li><a href="http://caniuse.com/#feat=flexbox">http://caniuse.com/#feat=flexbox</a></li>
+</ul>
+        </section>
+
+        <footer>
+          Sass-flexbox is maintained by <a href="https://github.com/zessx">zessx</a><br>
+          This page was generated by <a href="http://pages.github.com">GitHub Pages</a>. Tactile theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.
+        </footer>
+
+                  <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-32364969-13");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
+      </div>
+    </div>
+  </body>
+</html>
